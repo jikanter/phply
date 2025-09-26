@@ -4,16 +4,17 @@
 # Usage: php2json.py < input.php > output.json
 
 import sys
-sys.path.append('..')
+#sys.path.append('..')
 
 from phply.phplex import lexer
 from phply.phpparse import make_parser
 
-import simplejson
+import json as simplejson
 
 input = sys.stdin
 output = sys.stdout
 with_lineno = True
+
 
 def export(items):
     result = []
